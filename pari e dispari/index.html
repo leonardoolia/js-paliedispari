@@ -16,7 +16,23 @@
 </head>
 
 <body>
+    <form id="form">
+        <div>
+            <span>Scegli pari o dispari?</span><br>
+            Pari: <input type="radio" id="even" value="even" name="choice">
+            Dispari: <input type="radio" id="odd" value="odd" name="choice">
+        </div>
 
+        <div class="my-5">
+            <label for="quantity" class="form-label">Scegli un numero da 1 a 5</label><br>
+            <input type="number" id="quantity" name="quantity" min="1" max="5" value="">
+        </div>
+
+        <button>Invia</button>
+    </form>
+
+    <p id="pc-result"></p>
+    <p id="final-result"></p>
 </body>
 
 </html>
