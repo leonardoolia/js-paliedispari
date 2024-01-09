@@ -1,11 +1,10 @@
 //? 1. Recupero elementi dal DOM
 
 const formField = document.getElementById('form');
-const evenForm = document.getElementById('even');
-const oddForm = document.getElementById('odd');
 const formNumber = document.getElementById('quantity');
 
 const pcResultParagraph = document.getElementById('pc-result');
+const sumParagraph = document.getElementById('sum');
 const finalResultParagraph = document.getElementById('final-result');
 
 
@@ -32,26 +31,31 @@ formField.addEventListener('submit', function (e) {
     console.log(sum);
 
 
-    //! Funzione per determinare se l'utente ha scelto pari o dispari
-    function getChoice() {
-        const choice = document.querySelectorAll('input[name="choice"]:checked').value;
+    //! Determinare se l'utente ha scelto pari o dispari
 
-        console.log(choice);
-    };
+    const choice = document.querySelector('input[name="choice"]:checked').value;
+    console.log(choice);
+
 
 
     // Determino il risultato
     let message = '';
 
-    if (sum % 2 === 0 && evenForm) {
+    if (sum % 2 === 0 && choice === 'even') {
+        message = 'Congratulazioni, hai vinto'
+    } else if (sum % 2 !== 0 && choice === 'odd') {
         message = 'Congratulazioni, hai vinto'
     } else {
-        message = 'Spiacente, ha vinto il pc'
+        message = 'Spiacente, hai perso'
     };
 
 
 
+    // Stampo in pagina
 
+    pcResultParagraph.innerHTML = `Numero del pc: ${randomNumber}`;
+    sumParagraph.innerHTML = `La somma è: ${sum}`;
+    finalResultParagraph.innerHTML = `<strong>${message}</strong>`;
 
 });
 
