@@ -17,6 +17,32 @@ const randomNumber = getRandomNumber();
 
 
 
+//? 3. Aggiungo event listener
 
+formField.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    // Richiamo il numero casuale del pc
+    getRandomNumber();
+    console.log(randomNumber);
+
+    // Recupero il valore del numero scelto dall'utente
+    const userNumber = parseInt(formNumber.value);
+
+    // Sommo il numero scelto dall'utente con il numero casuale del pc
+    const sum = userNumber + randomNumber;
+    console.log(sum);
+
+
+
+
+
+
+
+
+
+
+
+});
 
 
