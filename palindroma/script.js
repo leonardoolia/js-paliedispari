@@ -30,4 +30,14 @@ formField.addEventListener('submit', function (e) {
     const result = getReverseWord(inputValue);
 
 
+    //? 4. Controllo se la parola è palindroma e la stampo
+    let message = '';
+
+    if (inputValue === result) {
+        message = 'La parola è palindroma';
+    } else {
+        message = 'La parola non è palindroma'
+    };
+    paragraph.innerText = message;
+
 });
