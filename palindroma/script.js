@@ -4,3 +4,13 @@ const inputField = document.getElementById('input');
 const paragraph = document.getElementById('paragrafo');
 
 
+//? 2. Creo event listener
+formField.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const inputValue = inputField.value.trim();
+
+
+
+
+});
