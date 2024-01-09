@@ -11,6 +11,23 @@ formField.addEventListener('submit', function (e) {
     const inputValue = inputField.value.trim();
 
 
+    //? 3. Creo funzione
+    /** JSDOC Syntax
+     * Funzione per invertire una parola
+     * @param {string} word la parola da invertire
+     * @returns {string} la parola inverita
+     */
+
+    function getReverseWord(word) {
+        let reversedWord = '';
+
+        for (let i = inputValue.length - 1; i >= 0; i--) {
+            reversedWord += inputValue[i];
+        };
+
+        return reversedWord;
+    };
+    const result = getReverseWord(inputValue);
 
 
 });
